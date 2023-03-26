@@ -1,0 +1,19 @@
+.stars {
+  display: flex;
+  position: relative;
+
+  &__list {
+    display: flex;
+    padding-left: 0;
+
+    &.\--mask {
+      position: absolute;
+      overflow: hidden;
+    }
+  }
+
+  &__star {
+    margin-right: 3px;
+    list-style-type: none;
+  }
+}

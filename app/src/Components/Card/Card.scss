@@ -1,0 +1,160 @@
+.rate-card-br-branded {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  margin-bottom: 12px;
+  padding: 14px;
+  padding-top: 20px;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid lighten(#5d5d5e, 50%);
+  min-height: 100px;
+
+  &:hover {
+    border: 1px solid #0157ff;
+    cursor: pointer;
+  }
+
+  &.\--checked {
+    border-color: #0157ff;
+
+    position: relative;
+  }
+
+  &__top-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__primary-heading {
+    border-radius: 0 0 5px 5px;
+    color: #d6e4ff;
+    background-color: lighten(#00143d, 20%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 120px;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  &__offer-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &__offer-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__logo-container {
+    margin:  auto 0 15px 0;
+    width: 75%;
+  }
+
+  &__lender-logo {
+    margin: auto 0;
+    max-height: 40px;
+    width: auto;
+    max-width: 100%;
+  }
+
+  &__license-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 40px; // Forcing height for card size consistency
+    justify-content: flex-end;
+  }
+
+  &__licenses {
+    font-size: 12px;
+    margin-top: 8px;
+    letter-spacing: 1.1px;
+    color: #5d5d5e;
+  }
+
+  &__checkbox-container {
+    margin-left: auto;
+  }
+
+  &__checkbox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    &__checkbox {
+      border: 1px solid #1a1e22;
+      border-radius: 5px;
+      flex-shrink: 0;
+      height: 28px;
+      margin-top: 3px;
+      width: 28px;
+
+      &:hover {
+        border: 2px solid #0157ff;
+        cursor: pointer;
+      }
+    }
+
+    &__check-mark {
+      display: none;
+      height: 26px;
+      padding: 5px;
+      width: 26px;
+    }
+
+    &.\--checked {
+      .rate-card-br-branded {
+        &__checkbox {
+          &:hover {
+            border: 1px solid #0157ff;
+          }
+        }
+
+        &__checkbox__checkbox {
+          background-color: #0157ff;
+          border-color: #0157ff;
+        }
+
+        &__checkbox__check-mark {
+          display: block;
+        }
+      }
+    }
+
+    &.\--disabled {
+      .rate-card-br-branded {
+        &__checkbox {
+          cursor: none;
+        }
+
+        &__checkbox__checkbox {
+          cursor: default;
+          border: 1px solid lighten(#5d5d5e, 50%);
+        }
+      }
+    }
+  }
+
+  &__rating-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__star-container {
+    margin-right: 10px;
+  }
+
+  &__rating {
+    margin-top: 10px;
+    letter-spacing: 1.1px;
+    color: #5d5d5e;
+  }
+}
