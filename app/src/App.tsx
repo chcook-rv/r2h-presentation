@@ -1,12 +1,13 @@
 import Header from './Components/Header';
 import './App.css';
+import CardContainer from './Components/CardContainer';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Header />
-      <div className="app-content">
-        <h1>content</h1>
+      <div className="question-box">
+        <CardContainer />
       </div>
     </div>
   );
